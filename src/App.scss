@@ -1,0 +1,78 @@
+.container {
+  width: 700px;
+  margin: 0 auto;
+  @media only screen and (max-width: 700px) {
+    max-width: 600px;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 80vw;
+  }
+  @media only screen and (max-width: 480px) {
+    width: 90vw;
+  }
+}
+
+.github-header-logo {
+  width: 100px;
+  display: block;
+  margin: 20px auto;
+}
+.search-bar-cont {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  .search-bar {
+    width: 100%;
+    height: 3vh;
+    ::placeholder {
+      margin-left: 10px;
+    }
+  }
+}
+
+.users-typeahead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  width: 99%;
+  margin: 0 auto;
+  border: 2px solid gray;
+  height: 60vh;
+  overflow-y: scroll;
+  border-radius: 5px;
+  .users-list-item {
+    text-align: center;
+    list-style: none;
+    margin: 20px;
+    width: 100%;
+    @media only screen and (max-width: 321px) {
+      width: 65%;
+    }
+    a {
+      display: flex;
+      justify-content: space-between;
+      text-decoration: none;
+      align-items: center;
+      color: coral;
+      border: 2px solid gray;
+      border-radius: 5px;
+      padding: 0 20px 0 0;
+      &:hover {
+        color: #ea6a47;
+      }
+      @media only screen and (max-width: 321px) {
+        padding: 0;
+        flex-direction: column;
+        border: unset;
+      }
+      .user-profile-picture {
+        width: 100px;
+        border-radius: 3px 0 0 3px;
+        @media only screen and (max-width: 321px) {
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
